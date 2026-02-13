@@ -1,1 +1,21 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+else {
+    echo "Connected successfully";
+}
 
+if (isset($_POST['submit'])) {
+    $id = $_POST['id'];
+    $task = $_POST['task'];
+    $description = $_POST['description'];
+
+    $sql = "INSERT INTO messages (id, task, description) VALUES ('$id', '$task', '$description')";
+    if (mysqli_query($conn, $sql)) {
+        echo "Message sent successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
