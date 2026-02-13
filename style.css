@@ -1,6 +1,8 @@
-{
-    .body
-{ background-color: #f2f2f2;}
+*{
+  
+ background-color: #f2f2f2;}
+
+ 
 
 .button
 {background-color: #e74c3c;
@@ -9,5 +11,7 @@ text-align:center;
 
 .form
 {text-align: center;
-background-color: #fff;}
-}
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;}
+
